@@ -16,10 +16,6 @@ class BringAppToForeground
     public function __construct()
     {
         //
-
-        Notification::title('Hello from NativePHP')
-            ->message('This is a detail message coming from your Laravel app.')
-            ->show();
     }
 
     /**
@@ -27,7 +23,7 @@ class BringAppToForeground
      */
     public function handle(ShowDashboardShortcut $event): void
     {
-        // Window::open();
+        Window::open();
 
         Notification::title('Hello from NativePHP')
             ->message('This is a detail message coming from your Laravel app.')

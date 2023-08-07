@@ -22,10 +22,6 @@ class ShowDashboardShortcut
     public function __construct()
     {
         //
-
-        Window::open();
-
-        // TODO: figure out why listener is not being dispatched
     }
 
     /**

@@ -27,6 +27,7 @@ class NativeAppServiceProvider
                 ->toggleFullscreen()
                 ->separator()
                 ->link('https://laravel.com', 'Learn More', 'CmdOrCtrl+L')
+                ->link('https://getmaple-ca.atlassian.net/jira/dashboards/10004', 'Jira Dashboard', 'CmdOrCtrl+J')
             )
             ->register();
             
