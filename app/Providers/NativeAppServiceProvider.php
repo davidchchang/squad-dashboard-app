@@ -7,6 +7,7 @@ use Native\Laravel\Facades\Dock;
 use Native\Laravel\Facades\Window;
 use Native\Laravel\Facades\GlobalShortcut;
 use Native\Laravel\Menu\Menu;
+use Native\Laravel\Facades\Notification;
 
 class NativeAppServiceProvider
 {
@@ -28,10 +29,16 @@ class NativeAppServiceProvider
                 ->link('https://laravel.com', 'Learn More', 'CmdOrCtrl+L')
             )
             ->register();
-
+            
         Window::open()
+            ->title('Squad Dashboard')
+            ->rememberState()
             ->width(800)
             ->height(800);
+
+        GlobalShortcut::key('Cmd+Ctrl+D')
+            ->event(\App\Events\ShowDashboardShortcut::class)
+            ->register();
 
         /**
             Dock::menu(
