@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/jira-dashboard', function () {
+    return redirect('https://getmaple-ca.atlassian.net/jira/dashboards/10004');
+})->name('jira-dashboard');

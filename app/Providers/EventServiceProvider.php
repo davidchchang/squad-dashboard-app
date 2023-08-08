@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Listeners\BringAppToForeground;
+use App\Listeners\NavigateToJiraDashboard;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -22,6 +23,10 @@ class EventServiceProvider extends ServiceProvider
         \App\Events\ShowDashboardShortcut::class => [
             BringAppToForeground::class,
         ],
+        \App\Events\ShowJiraDashboardShortcut::class => [
+            // BringAppToForeground::class,
+            NavigateToJiraDashboard::class,
+        ]
     ];
 
     /**

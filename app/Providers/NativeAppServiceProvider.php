@@ -27,7 +27,7 @@ class NativeAppServiceProvider
                 ->toggleFullscreen()
                 ->separator()
                 ->link('https://laravel.com', 'Learn More', 'CmdOrCtrl+L')
-                ->link('https://getmaple-ca.atlassian.net/jira/dashboards/10004', 'Jira Dashboard', 'CmdOrCtrl+J')
+                ->event(\App\Events\ShowJiraDashboardShortcut::class, 'Jira Dashboard', 'CmdOrCtrl+J')
             )
             ->register();
             
@@ -35,7 +35,8 @@ class NativeAppServiceProvider
             ->title('Squad Dashboard')
             ->rememberState()
             ->width(800)
-            ->height(800);
+            ->height(800)
+            ->route('jira-dashboard');
 
         GlobalShortcut::key('Cmd+Ctrl+D')
             ->event(\App\Events\ShowDashboardShortcut::class)
