@@ -4,7 +4,7 @@ Desktop application to view squad information at-a-glance. Built on [NativePHP](
 
 ## Getting Started
 
-- Install dependencies: `php artisan native:install`
+- Install dependencies: Run `composer install` upon first checkout, and then run `php artisan native:install`.
 - Launch the app: `php artisan native:serve`
 
 ## Generate the app binary
