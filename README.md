@@ -18,5 +18,9 @@ Desktop application to view squad information at-a-glance. Built on [NativePHP](
 
 ## Other Notes
 
+- Windows API is quite thorough for an alpha version; most of the APIs seem to be working (although route navigation between windows seemed to be quite buggy).
+- Native notifications working well via API.
+- Most impressed by the global hotkeys API, which can typically be quite complicated to implement natively (at least via Swift).
+- Have not had a chance to try this cross-platform on Windows yet.
 - App build size is what you would expect for Electron apps, perhaps even more so with Laravel dependencies added on top (273.8 MB for Hello World app)
 - App loading time is very slow (several seconds) and what you would expect for unoptimized Electron apps
